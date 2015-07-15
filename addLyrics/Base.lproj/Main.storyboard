@@ -22,17 +22,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZ3-cm-uzX">
-                                <rect key="frame" x="16" y="530" width="135" height="30"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressplayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qz7-4I-0HU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw5-pP-aHf">
-                                <rect key="frame" x="159" y="530" width="145" height="30"/>
+                                <rect key="frame" x="214" y="530" width="90" height="30"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -58,6 +49,24 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ct9-MV-0tn"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcJ-pg-FCZ">
+                                <rect key="frame" x="16" y="530" width="90" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VyF-Eo-kJR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZ3-cm-uzX">
+                                <rect key="frame" x="114" y="530" width="92" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressplayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qz7-4I-0HU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -77,12 +86,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232" y="364"/>
+            <point key="canvasLocation" x="276" y="375"/>
         </scene>
-        <!--Lyrics Editor View Controller-->
+        <!--Lyrics Text Editor View Controller-->
         <scene sceneID="ekT-Re-9af">
             <objects>
-                <viewController storyboardIdentifier="lyricsEditor" id="tMP-kc-6Ni" customClass="lyricsEditorViewController" customModule="addLyrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lyricsTextEditor" id="tMP-kc-6Ni" customClass="lyricsTextEditorViewController" customModule="addLyrics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jpe-ZU-5La"/>
                         <viewControllerLayoutGuide type="bottom" id="n4b-LC-kwX"/>
@@ -98,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbq-MY-Oox">
-                                <rect key="frame" x="16" y="530" width="142" height="30"/>
+                                <rect key="frame" x="16" y="530" width="90" height="30"/>
                                 <state key="normal" title="Music">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -107,12 +116,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpP-Cn-Kby">
-                                <rect key="frame" x="166" y="530" width="138" height="30"/>
+                                <rect key="frame" x="211" y="530" width="93" height="30"/>
                                 <state key="normal" title="Editor">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="VCy-Xx-OK3"/>
+                                    <action selector="ToTimeEditor:" destination="tMP-kc-6Ni" eventType="touchUpInside" id="O2o-fr-wwF"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sQe-1u-1uu">
@@ -127,18 +136,28 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmY-th-35V">
+                                <rect key="frame" x="114" y="530" width="89" height="30"/>
+                                <state key="normal" title="Delete All">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressDeleteButton:" destination="tMP-kc-6Ni" eventType="touchUpInside" id="b2Z-bv-sR8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="ToTimeEditor" destination="CpP-Cn-Kby" id="224-Vp-URs"/>
+                        <outlet property="ToTimeEditor" destination="CpP-Cn-Kby" id="MVx-in-biT"/>
                         <outlet property="editorContainerVIew" destination="sQe-1u-1uu" id="ahs-he-ilY"/>
                         <outlet property="lyricsEditorTextView" destination="7HH-QD-Tge" id="FT4-TO-RkC"/>
+                        <outlet property="songName" destination="TFo-oR-1mJ" id="McC-Do-Rb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cob-Xi-SPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="657" y="371"/>
+            <point key="canvasLocation" x="-131" y="375"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

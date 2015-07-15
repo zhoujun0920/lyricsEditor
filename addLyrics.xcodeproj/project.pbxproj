@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5AED9C3E1B54A93C00185DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AED9C3D1B54A93C00185DE1 /* AppDelegate.swift */; };
-		5AED9C401B54A93C00185DE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AED9C3F1B54A93C00185DE1 /* ViewController.swift */; };
-		5AED9C431B54A93C00185DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AED9C411B54A93C00185DE1 /* Main.storyboard */; };
+		5AED9C401B54A93C00185DE1 /* lyricsTimeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AED9C3F1B54A93C00185DE1 /* lyricsTimeEditorViewController.swift */; };
 		5AED9C451B54A93C00185DE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AED9C441B54A93C00185DE1 /* Images.xcassets */; };
 		5AED9C481B54A93C00185DE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AED9C461B54A93C00185DE1 /* LaunchScreen.xib */; };
 		5AED9C541B54A93C00185DE1 /* addLyricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AED9C531B54A93C00185DE1 /* addLyricsTests.swift */; };
+		5AED9C5F1B54D00B00185DE1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AED9C5E1B54D00B00185DE1 /* AVFoundation.framework */; };
+		5AED9C611B54D4F500185DE1 /* Lyric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AED9C601B54D4F500185DE1 /* Lyric.swift */; };
+		5AED9C631B54D64400185DE1 /* rainbow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AED9C621B54D64400185DE1 /* rainbow.mp3 */; };
+		5AED9C651B55D80300185DE1 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AED9C641B55D80300185DE1 /* background.png */; };
+		5AED9C671B560E2B00185DE1 /* wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AED9C661B560E2B00185DE1 /* wood.png */; };
+		5AED9C691B560E5900185DE1 /* lyricsTextEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AED9C681B560E5900185DE1 /* lyricsTextEditorViewController.swift */; };
+		5AED9C6C1B56292E00185DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AED9C6A1B56292E00185DE1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +35,19 @@
 		5AED9C381B54A93C00185DE1 /* addLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = addLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AED9C3C1B54A93C00185DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AED9C3D1B54A93C00185DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5AED9C3F1B54A93C00185DE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5AED9C421B54A93C00185DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5AED9C3F1B54A93C00185DE1 /* lyricsTimeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lyricsTimeEditorViewController.swift; sourceTree = "<group>"; };
 		5AED9C441B54A93C00185DE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5AED9C471B54A93C00185DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5AED9C4D1B54A93C00185DE1 /* addLyricsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = addLyricsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AED9C521B54A93C00185DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AED9C531B54A93C00185DE1 /* addLyricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addLyricsTests.swift; sourceTree = "<group>"; };
+		5AED9C5E1B54D00B00185DE1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5AED9C601B54D4F500185DE1 /* Lyric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lyric.swift; sourceTree = "<group>"; };
+		5AED9C621B54D64400185DE1 /* rainbow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rainbow.mp3; path = ../../../Downloads/rainbow.mp3; sourceTree = "<group>"; };
+		5AED9C641B55D80300185DE1 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../Dropbox/HILDA/Mockups/Misc./background.png; sourceTree = "<group>"; };
+		5AED9C661B560E2B00185DE1 /* wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wood.png; path = ../../../Downloads/wood.png; sourceTree = "<group>"; };
+		5AED9C681B560E5900185DE1 /* lyricsTextEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lyricsTextEditorViewController.swift; sourceTree = "<group>"; };
+		5AED9C6B1B56292E00185DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AED9C5F1B54D00B00185DE1 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,7 @@
 		5AED9C2F1B54A93C00185DE1 = {
 			isa = PBXGroup;
 			children = (
+				5AED9C5E1B54D00B00185DE1 /* AVFoundation.framework */,
 				5AED9C3A1B54A93C00185DE1 /* addLyrics */,
 				5AED9C501B54A93C00185DE1 /* addLyricsTests */,
 				5AED9C391B54A93C00185DE1 /* Products */,
@@ -77,9 +91,11 @@
 		5AED9C3A1B54A93C00185DE1 /* addLyrics */ = {
 			isa = PBXGroup;
 			children = (
+				5AED9C601B54D4F500185DE1 /* Lyric.swift */,
 				5AED9C3D1B54A93C00185DE1 /* AppDelegate.swift */,
-				5AED9C3F1B54A93C00185DE1 /* ViewController.swift */,
-				5AED9C411B54A93C00185DE1 /* Main.storyboard */,
+				5AED9C3F1B54A93C00185DE1 /* lyricsTimeEditorViewController.swift */,
+				5AED9C681B560E5900185DE1 /* lyricsTextEditorViewController.swift */,
+				5AED9C6A1B56292E00185DE1 /* Main.storyboard */,
 				5AED9C441B54A93C00185DE1 /* Images.xcassets */,
 				5AED9C461B54A93C00185DE1 /* LaunchScreen.xib */,
 				5AED9C3B1B54A93C00185DE1 /* Supporting Files */,
@@ -90,6 +106,9 @@
 		5AED9C3B1B54A93C00185DE1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5AED9C661B560E2B00185DE1 /* wood.png */,
+				5AED9C641B55D80300185DE1 /* background.png */,
+				5AED9C621B54D64400185DE1 /* rainbow.mp3 */,
 				5AED9C3C1B54A93C00185DE1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,9 +211,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AED9C431B54A93C00185DE1 /* Main.storyboard in Resources */,
+				5AED9C651B55D80300185DE1 /* background.png in Resources */,
+				5AED9C671B560E2B00185DE1 /* wood.png in Resources */,
 				5AED9C481B54A93C00185DE1 /* LaunchScreen.xib in Resources */,
+				5AED9C6C1B56292E00185DE1 /* Main.storyboard in Resources */,
 				5AED9C451B54A93C00185DE1 /* Images.xcassets in Resources */,
+				5AED9C631B54D64400185DE1 /* rainbow.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AED9C401B54A93C00185DE1 /* ViewController.swift in Sources */,
+				5AED9C401B54A93C00185DE1 /* lyricsTimeEditorViewController.swift in Sources */,
 				5AED9C3E1B54A93C00185DE1 /* AppDelegate.swift in Sources */,
+				5AED9C691B560E5900185DE1 /* lyricsTextEditorViewController.swift in Sources */,
+				5AED9C611B54D4F500185DE1 /* Lyric.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,20 +260,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5AED9C411B54A93C00185DE1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AED9C421B54A93C00185DE1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5AED9C461B54A93C00185DE1 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5AED9C471B54A93C00185DE1 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		5AED9C6A1B56292E00185DE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AED9C6B1B56292E00185DE1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
