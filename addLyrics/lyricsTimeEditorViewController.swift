@@ -10,16 +10,16 @@ import UIKit
 
 import AVFoundation
 
-var lyricsFromTextEditor: String = String()
-var nameFromTextEditor: String = String()
+
 
 class lyricsTimeEditorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let cellTableIdentifier = "CellTableIdentifier"
     var testSong: lyric = lyric()
     var audioPlayer = AVAudioPlayer()
-    
     var Song_Lyrics: lyric = lyric()
+    var lyricsFromTextEditor: String = String()
+    var nameFromTextEditor: String = String()
 
     
     @IBOutlet weak var labelName: UILabel!
@@ -47,13 +47,15 @@ class lyricsTimeEditorViewController: UIViewController, UITableViewDataSource, U
         lyrics.separatorColor = UIColor.clearColor()
         //lyrics.backgroundView?.alpha = 0.5
         lyrics.alpha = 0.5
+        
+//        lyrics.textLabel.numberOfLines = 0;
+//        lyrics.textLabel.lineBreakMode = UILineBreakModeWordWrap;
       
         //self.lyrics.backgroundColor = UIColor.clearColor();
         //self.lyrics.opaque = ;
         //self.lyrics.backgroundView? = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TableViewBackground.png"]];
         //self.lyrics.backgroundColor = UIColor(patternImage:UIImage(named: "background.png")!)
-        println(lyricsFromTextEditor)
-        
+
         readLineFromLyricsText()
         
         
@@ -150,14 +152,19 @@ class lyricsTimeEditorViewController: UIViewController, UITableViewDataSource, U
         Song_Lyrics.name = nameFromTextEditor
         Song_Lyrics.sentence.append(temp)
         Song_Lyrics.time = [Float](count: Song_Lyrics.sentence.count, repeatedValue: 0.0)
-        Song_Lyrics.add_time = [Bool](count: testSong.sentence.count, repeatedValue: false)
+        Song_Lyrics.add_time = [Bool](count: Song_Lyrics.sentence.count, repeatedValue: false)
         
     }
     
 
     @IBAction func pressBackButton(sender: AnyObject) {
-        let lyricsTextEditor = storyboard!.instantiateViewControllerWithIdentifier("lyricsTextEditor") as! lyricsTextEditorViewController
-        self.presentViewController(lyricsTextEditor, animated: true, completion: nil)
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+//        let lyricsTextEditor = storyboard!.instantiateViewControllerWithIdentifier("lyricsTextEditor") as! lyricsTextEditorViewController
+//        self.presentViewController(lyricsTextEditor, animated: true, completion: nil)
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0
         
     }
 
@@ -178,7 +185,9 @@ class lyricsTimeEditorViewController: UIViewController, UITableViewDataSource, U
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = self.lyrics.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-            
+        
+        cell.textLabel?.numberOfLines = 0;
+        cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
         cell.textLabel?.text = testSong.sentence[indexPath.row]
         cell.textLabel?.textAlignment = NSTextAlignment.Center
             

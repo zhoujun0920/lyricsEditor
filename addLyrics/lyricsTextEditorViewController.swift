@@ -48,7 +48,16 @@ class lyricsTextEditorViewController: UIViewController {
     
 
     @IBAction func pressDeleteButton(sender: AnyObject) {
-        lyricsEditorTextView.text = ""
+        var refreshAlert = UIAlertController(title: "Delete Lyrics", message: "Are you sure you want delete all?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
+            self.lyricsEditorTextView.text = ""
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
+        
     }
     @IBAction func ToMusic(sender: AnyObject) {
         
@@ -61,14 +70,14 @@ class lyricsTextEditorViewController: UIViewController {
 //        UIView.beginAnimations("View Flip", context: nil)
 //        UIView.setAnimationDuration(0.4)
 //        UIView.setAnimationCurve(.EaseInOut)
-//        UIView.commitAnimations()        
-        nameFromTextEditor = songName.text!
-        if lyricsEditorTextView.text == "" {
-            lyricsFromTextEditor = "You don't have any lyrics"
-        }else {
-            lyricsFromTextEditor = lyricsEditorTextView.text
-        }
+//        UIView.commitAnimations() 
         let lyricsTimeEditor = storyboard!.instantiateViewControllerWithIdentifier("lyricsTimeEditor") as! lyricsTimeEditorViewController
+        lyricsTimeEditor.nameFromTextEditor = songName.text!
+        if lyricsEditorTextView.text == "" {
+            lyricsTimeEditor.lyricsFromTextEditor = "You don't have any lyrics"
+        }else {
+            lyricsTimeEditor.lyricsFromTextEditor = lyricsEditorTextView.text
+        }
         self.presentViewController(lyricsTimeEditor, animated: true, completion: nil)
 
 
